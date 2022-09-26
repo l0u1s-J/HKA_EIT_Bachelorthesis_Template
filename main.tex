@@ -1,0 +1,132 @@
+\documentclass[11pt]{article}
+
+\include{standard_packages.tex}
+
+\usepackage[sfdefault]{noto}
+
+\definecolor{hka-green}{RGB}{33,154,52}
+
+%%% Author Infos %%%
+\author{Max Mustermann}
+\newcommand{\authorID}{12345}
+
+%%% Document Infos %%%
+\title{Irgendein Titel, das wahrscheinlich viel zu lang und kompliziert ist}
+\newcommand{\subject}{Informationstechnik}
+\newcommand{\keywords}{Informationstechnik, Bachelorthesis}
+\newcommand{\referent}{Prof. Dr.-Ing. Prof X}
+\newcommand{\korreferent}{Prof. Dr.-Ing. Prof Y}
+\newcommand{\company}{Irgendeine Firma GmbH \& Co. KG}
+\newcommand{\supervisor}{Der Betreuer}
+\newcommand{\timeframe}{14.07.2022 - 13.11.2022}
+\newcommand{\semester}{Sommersemester 2022}
+
+%%% ToC %%%
+\renewcommand{\cfttoctitlefont}{\huge\bfseries\color{hka-green}}
+
+\renewcommand{\cftsecfont}{\large\bfseries\color{hka-green}}
+\renewcommand{\cftsubsecfont}{\normalsize}
+\renewcommand{\cftsubsubsecfont}{\normalsize}
+
+\renewcommand{\cftsecpagefont}{\large\bfseries\color{hka-green}}
+\renewcommand{\cftsubsecpagefont}{\normalsize}
+\renewcommand{\cftsubsubsecpagefont}{\normalsize}
+
+\renewcommand{\cftsubsecdotsep}{3}
+\renewcommand{\cftsubsubsecdotsep}{3}
+\renewcommand{\cftpnumalign}{c}
+
+\renewcommand{\cftsecnumwidth}{1cm}
+\renewcommand{\cftsubsecnumwidth}{1cm}
+\renewcommand{\cftsubsubsecnumwidth}{1.4cm}
+
+\renewcommand{\cftsecaftersnum}{.}
+\renewcommand{\cftsubsecaftersnum}{.}
+\renewcommand{\cftsubsubsecaftersnum}{.}
+
+\setlength{\cftbeforesecskip}{15pt}
+\setlength{\cftbeforesubsecskip}{5pt}
+\setlength{\cftbeforesubsubsecskip}{2pt}
+
+\newcommand\mydot[1]{\scalebox{#1}{.}}
+\renewcommand\cftdot{\mydot{0.5}}
+
+%%% Titles %%%
+\titleformat*{\section}{\huge\bfseries\color{hka-green}}
+\titleformat*{\subsection}{\Large\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+\titlelabel{\thetitle.\quad}
+
+%%% Page Style %%%
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.1in}
+\geometry{left=2.7cm,right=2.7cm,top=1cm,bottom=2cm,footskip=1.5cm}  % Setup for titlepage
+
+%%% Header & Footer %%%
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+
+%%% Counters %%%
+\counterwithin{figure}{section}
+
+%% Bibliography
+\usepackage[style=ieee]{biblatex}
+\addbibresource{References.bib}
+\usepackage{fvextra}
+\usepackage[german=quotes]{csquotes}
+
+%% Footnotes
+\usepackage[bottom]{footmisc}
+\renewcommand{\footnoterule}{}
+
+%% Acronyms & LoA
+\usepackage{acro} %
+\input{acronyms.tex}
+
+
+% Minted
+% \usepackage{ifthen}
+% \usepackage{currfile-abspath}
+% \getabspath{\jobname.log}
+% \ifthenelse{\equal{\theabsdir}{\thepwd}}{}{\PassOptionsToPackage{outputdir=\theabsdir}{minted}}
+% \usepackage{minted}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% HKA Title page
+\input{Template_HKA/template.tex}
+\newgeometry{margin=2cm}
+
+% ToC
+\tableofcontents
+\newpage
+
+% Footer
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\renewcommand{\footrulewidth}{0.1pt}
+\rfoot{\thepage \hspace{1pt} von \pageref{LastPage} }
+\cfoot{\leftmark}
+
+% Body
+\include{Sections/section_1.tex}
+\include{Sections/section_2.tex}
+\include{Sections/section_3.tex}
+
+% Bibliography
+\phantomsection
+\cfoot{}
+\addcontentsline{toc}{section}{Literaturverzeichnis}
+\printbibliography
+\newpage
+
+% LoF
+\phantomsection
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\listoffigures
+\thispagestyle{fancy}
+\newpage
+
+\end{document}

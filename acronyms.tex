@@ -1,0 +1,17 @@
+%% List
+\newlist{acronyms}{description}{100}
+\setlist[acronyms]{labelwidth=3cm,leftmargin=1cm,itemsep=3pt,itemindent=2cm,font=\normalfont\bfseries}
+%\DeclareAcroListStyle{custom}{list}{list = acronyms}
+\acsetup{
+    make-links = true,
+    format =,
+    list/display=all,
+    list/heading=section*,
+    list/name={Abkürzungsverzeichnis\\},
+}
+
+%% Acronyms
+\DeclareAcronym{fpga}{
+  short=FPGA,
+  long=Field Programable Gate Array,
+}

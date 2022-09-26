@@ -1,0 +1,76 @@
+{
+    "spellright.language": [
+        "de",
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
+
+  "latex-workshop.view.pdf.viewer": "tab",
+
+  "latex-workshop.showContextMenu":true,
+
+  "latex-workshop.latex.tools": [
+      {
+        "name": "latexmk",
+        "command": "latexmk",
+        "args": [
+          "-synctex=1",
+          "-interaction=nonstopmode",
+          "-file-line-error",
+          "--shell-escape",
+          "-pdf",
+          "-outdir=.out",
+          "-aux-directory=.aux",
+          "%DOC%"
+        ]
+      },
+      {
+        "name": "pdflatex",
+        "command": "pdflatex",
+        "args": [
+          "--shell-escape",
+          "-synctex=1",
+          "-interaction=nonstopmode",
+          "-file-line-error",
+          "-aux-directory=.aux",
+          "-output-directory=.out",
+          "%DOC%"
+        ]
+      },
+      {
+        "name": "bibtex",
+        "command": "bibtex",
+        "args": [
+            "--aux-directory=.aux",
+            "%DOCFILE%"
+        ],
+        "env": {}
+      }
+    ],
+
+  "macros": {
+      "commentDown": [
+          "editor.action.copyLinesDownAction",
+          "cursorUp",
+          "editor.action.addCommentLine",
+          "cursorDown"
+      ],
+      "addFigure": [
+          "cursorEnd",
+            {"command": "type", "args": {"text": "\\begin{figure}[H]\n\\centering\n\\includegraphics[width=\\textwidth]{}\n\\caption{}\n\\label{}\n\\end{figure}"}}
+        ],
+      "addSource":[
+          "cursorEnd",
+          {"command":"type","args":{"text": "\\footnotetext{Quelle: \\color{blue} \\href{https://}{}}"}}
+      ],
+
+      "addToDictionary":[
+        "spellright.addFromSelectionToUserDictionary",
+        "cursorRight",
+      ]
+  },
+}

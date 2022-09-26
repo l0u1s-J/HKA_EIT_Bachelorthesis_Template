@@ -1,0 +1,49 @@
+%%% PDF Properties %%%
+\hypersetup{                                                                        
+    pdftitle    = {\thetitle},                                    
+    pdfsubject  = {\subject},                              
+    pdfauthor   = {\theauthor},                                        
+    pdfkeywords = {\keywords} ,                            
+    pdfcreator  = {pdflatex},           
+    pdfproducer = {LaTeX with hyperref}
+}
+
+%%% TITLE PAGE %%%
+\begin{titlepage}
+    \begin{minipage}[t]{13cm}\raggedright
+        \includegraphics[width=5cm]{Template_HKA/hka_adrdess.png}
+        \vspace{4cm}
+
+        \Large
+        Studiengang Elektro- und Informationstechnik – 
+        Vertiefung Informationstechnik
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[c]{0.2\textwidth}\raggedleft
+        \includegraphics[width=\textwidth]{Template_HKA/hka_bachelor.png}
+    \end{minipage}
+    
+    \vspace{1cm}
+    \color{hka-green}
+    \Huge\textbf{Bachelor-Thesis}
+
+    \vspace{1cm}
+    \color{black}\huge
+    \textbf{\thetitle}
+
+    \vspace{2cm}
+    \Large
+    von\\
+    \color{hka-green} \textbf{\theauthor}
+    \vfill
+    \color{black}\normalsize{}
+    \begin{tabular}{ll}
+        Matrikel-Nummer:            & \quad \authorID                           \\[1ex]
+        Referent:                   & \quad \referent                           \\[1ex]
+        Korreferent:                & \quad \korreferent                        \\[4ex]
+        Arbeitsplatz:               & \quad \company                            \\[1ex]
+        Betreuer am Arbeitsplatz:   & \quad \supervisor                         \\[4ex]
+        Zeitraum:                   & \quad \timeframe                          \\[1ex]
+    \end{tabular}
+\end{titlepage}
+\newpage
