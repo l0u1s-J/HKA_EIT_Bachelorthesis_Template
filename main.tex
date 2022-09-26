@@ -61,7 +61,7 @@
 %%% Page Style %%%
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.1in}
-\geometry{left=3cm,right=3cm,top=1cm,bottom=2cm,footskip=1.5cm}  % Setup for titlepage
+\geometry{margin=2cm,footskip=1.2cm} % Setup for titlepage
 
 %%% Header & Footer %%%
 \pagestyle{fancy}
@@ -103,8 +103,8 @@
 \begin{document}
 
 % HKA Title page
-\input{Template_HKA/template.tex}
-\newgeometry{margin=2cm}
+\include{Template_HKA/template.tex}
+\newgeometry{margin=2cm,footskip=1.2cm}
 
 % ToC
 \tableofcontents
