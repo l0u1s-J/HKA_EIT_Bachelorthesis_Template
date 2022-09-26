@@ -94,6 +94,7 @@
 
 
 % % Minted   --- Use with shell-escape flag
+% % Sieht zwar besser aus als listings aber braucht so unglaublich lange zum kompilieren. Dir überlassen. 
 % \usepackage{ifthen}
 % \usepackage{currfile-abspath}
 % \getabspath{\jobname.log}
@@ -104,20 +105,21 @@
 \begin{document}
 
 % HKA Title page
-\include{Template_HKA/template.tex}
+\include{Template_HKA/template.tex}  % Sieht geil aus ich weiß, danke
 \newgeometry{margin=2cm,footskip=1.2cm}
 
 % ToC
 \tableofcontents
-\thispagestyle{empty}
+\thispagestyle{empty}  
 \newpage
 
 % Footer
+% Agefackter scheiss hier unten, dafür da, dass die letzte subsection oder section im footer angezeigt wird
 \renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
 \renewcommand{\footrulewidth}{0.1pt}
 \rfoot{\thepage \hspace{1pt} von \pageref{LastPage} }
-\cfoot{\leftmark}
+\cfoot{\leftmark}  % Das kannste wegmachen wenn du nicht magst
 
 % Body
 % Hier kommt eigentlich dein Zeug. Include macht nützlicherweise einen clearpage nach der section, kann aber auch mit input importiert werden
@@ -136,7 +138,7 @@
 \phantomsection
 \addcontentsline{toc}{section}{Abbildungsverzeichnis}
 \listoffigures   % Habe nie verstanden warum dass dabei sein muss. Wer schaut sich das bitte an ?!
-\thispagestyle{fancy}
+\thispagestyle{fancy}  % SOOOO FANCYYY
 \newpage
 
 \end{document}
