@@ -22,22 +22,22 @@
 \newcommand{\semester}{Sommersemester 2022}
 
 %%% ToC %%%
-\renewcommand{\cfttoctitlefont}{\huge\bfseries\color{hka-green}}                
+\renewcommand{\cfttoctitlefont}{\huge\bfseries\color{hka-green}}    % Bitte um eine Schweigeminute für diese Ordnung             
 \renewcommand{\cftloftitlefont}{\huge\bfseries\color{hka-green}}
 
-\renewcommand{\cftsecfont}{\large\bfseries\color{hka-green}}
+\renewcommand{\cftsecfont}{\large\bfseries\color{hka-green}}        % Schau doch
 \renewcommand{\cftsubsecfont}{\normalsize}
 \renewcommand{\cftsubsubsecfont}{\normalsize}
 
-\renewcommand{\cftsecpagefont}{\large\bfseries\color{hka-green}}
+\renewcommand{\cftsecpagefont}{\large\bfseries\color{hka-green}}    % Krass oder
 \renewcommand{\cftsubsecpagefont}{\normalsize}
 \renewcommand{\cftsubsubsecpagefont}{\normalsize}
 
-\renewcommand{\cftsubsecdotsep}{3}
+\renewcommand{\cftsubsecdotsep}{3}                                      
 \renewcommand{\cftsubsubsecdotsep}{3}
 \renewcommand{\cftpnumalign}{c}
 
-\renewcommand{\cftsecnumwidth}{1cm}
+\renewcommand{\cftsecnumwidth}{1cm}                              
 \renewcommand{\cftsubsecnumwidth}{1cm}
 \renewcommand{\cftsubsubsecnumwidth}{1.4cm}
 
@@ -45,22 +45,22 @@
 \renewcommand{\cftsubsecaftersnum}{.}
 \renewcommand{\cftsubsubsecaftersnum}{.}
 
-\setlength{\cftbeforesecskip}{15pt}
+\setlength{\cftbeforesecskip}{15pt}                         
 \setlength{\cftbeforesubsecskip}{5pt}
 \setlength{\cftbeforesubsubsecskip}{2pt}
 
-\newcommand\mydot[1]{\scalebox{#1}{.}}
-\renewcommand\cftdot{\mydot{0.5}}
+\newcommand\mydot[1]{\scalebox{#1}{.}}                         
+\renewcommand\cftdot{\mydot{0.5}}       % WEIL MEINE PUNKTE BESSER SIND
 
 %%% Titles %%%
-\titleformat*{\section}{\huge\bfseries\color{hka-green}}
+\titleformat*{\section}{\huge\bfseries\color{hka-green}}  % Bring some green into your life
 \titleformat*{\subsection}{\Large\bfseries}
 \titleformat*{\subsubsection}{\large\bfseries}
 \titlelabel{\thetitle.\quad}
 
 %%% Page Style %%%
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0.1in}
+\setlength{\parindent}{0pt}  % Niemand mag dich
+\setlength{\parskip}{0.1in}  % Du bist ok
 \geometry{margin=2cm,footskip=1.2cm} % Setup for pagestyle
 
 %%% Header & Footer %%%
@@ -70,7 +70,7 @@
 
 %%% Captions %%%
 \DeclareCaptionFormat{hka-caption}{
-    \color{hka-green}\textbf{#1#2}\textit{\small #3}
+    \color{hka-green}\textbf{#1#2}\textit{\small #3}  % Mehr grün ist gut für dich
 }
 \captionsetup{format=hka-caption}
 
@@ -84,7 +84,7 @@
 \usepackage[german=quotes]{csquotes}
 
 %% Footnotes
-\usepackage[bottom]{footmisc}
+\usepackage[bottom]{footmisc}   % hab ich fancy gehört?
 \renewcommand{\footnoterule}{}
 
 %% Acronyms & LoA
@@ -114,7 +114,7 @@
 \newpage
 
 % Footer
-% Agefackter scheiss hier unten, dafür da, dass die letzte subsection oder section im footer angezeigt wird
+% Abgefacktes zeug hier unten. Dafür da, dass die letzte subsection oder section im footer angezeigt wird
 \renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
 \renewcommand{\footrulewidth}{0.1pt}
