@@ -7,22 +7,22 @@
 \definecolor{hka-green}{RGB}{33,154,52}
 
 %%% Author Infos %%%
-\author{Max Mustermann}
-\newcommand{\authorID}{12345}
+\author{Max Mustermann}                                                         % S-S-S-Slim Shady
+\newcommand{\authorID}{12345}                                                   % Matrikel-Nr
 
 %%% Document Infos %%%
-\title{Irgendein Titel, das wahrscheinlich viel zu lang und kompliziert ist}
-\newcommand{\subject}{Informationstechnik}
-\newcommand{\keywords}{Informationstechnik, Bachelorthesis}
-\newcommand{\referent}{Prof. Dr.-Ing. Prof X}
-\newcommand{\korreferent}{Prof. Dr.-Ing. Prof Y}
-\newcommand{\company}{Irgendeine Firma GmbH \& Co. KG}
-\newcommand{\supervisor}{Der Betreuer}
-\newcommand{\timeframe}{14.07.2022 - 13.11.2022}
+\title{Irgendein Titel, das wahrscheinlich viel zu lang und kompliziert ist}    % Was schreib ich nochmal?
+\newcommand{\subject}{Informationstechnik}                                      % Vertiefungsrichtung
+\newcommand{\keywords}{Informationstechnik, Bachelorthesis}                     % PDF keywords
+\newcommand{\referent}{Prof. Dr.-Ing. Prof X}                                   % Korrektester, den man gefunden hat
+\newcommand{\korreferent}{Prof. Dr.-Ing. Prof Y}                                % Zweitkorrektester, aber eigentlich egal
+\newcommand{\company}{Irgendeine Firma GmbH \& Co. KG}                          % Wo du dabei Kohle machst
+\newcommand{\supervisor}{Der Betreuer}                                          % Wem du knechtest
+\newcommand{\timeframe}{14.07.2022 - 13.11.2022}                                % Zeit der Anmeldung -- Zeit der Abgabe
 \newcommand{\semester}{Sommersemester 2022}
 
 %%% ToC %%%
-\renewcommand{\cfttoctitlefont}{\huge\bfseries\color{hka-green}}
+\renewcommand{\cfttoctitlefont}{\huge\bfseries\color{hka-green}}                
 \renewcommand{\cftloftitlefont}{\huge\bfseries\color{hka-green}}
 
 \renewcommand{\cftsecfont}{\large\bfseries\color{hka-green}}
@@ -61,10 +61,10 @@
 %%% Page Style %%%
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.1in}
-\geometry{margin=2cm,footskip=1.2cm} % Setup for titlepage
+\geometry{margin=2cm,footskip=1.2cm} % Setup for pagestyle
 
 %%% Header & Footer %%%
-\pagestyle{fancy}
+\pagestyle{fancy}   % Sooo fancy
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 
@@ -75,11 +75,11 @@
 \captionsetup{format=hka-caption}
 
 %%% Counters %%%
-\counterwithin{figure}{section}
+\counterwithin{figure}{section}     % Kann kopiert werden für equations usw
 
 %% Bibliography
-\usepackage[style=ieee]{biblatex}
-\addbibresource{References.bib}
+\usepackage[style=ieee]{biblatex}  
+\addbibresource{References.bib}     % Wer traut sich da Wikipedia reinzupacken?
 \usepackage{fvextra}
 \usepackage[german=quotes]{csquotes}
 
@@ -89,10 +89,11 @@
 
 %% Acronyms & LoA
 \usepackage{acro} %
-\input{acronyms.tex}
+\input{acronyms.tex}    % Alles Nur Aus Liebe
+% Für die ganz extremen unter euch kann man auch ein Abkürzungsverzeichnis mit dem Package packen. Ich lasse euch den Spaß :*
 
 
-% Minted
+% % Minted   --- Use with shell-escape flag
 % \usepackage{ifthen}
 % \usepackage{currfile-abspath}
 % \getabspath{\jobname.log}
@@ -119,21 +120,22 @@
 \cfoot{\leftmark}
 
 % Body
+% Hier kommt eigentlich dein Zeug. Include macht nützlicherweise einen clearpage nach der section, kann aber auch mit input importiert werden
 \include{Sections/section_1.tex}
 \include{Sections/section_2.tex}
 \include{Sections/section_3.tex}
 
-% Bibliography
+% Bibliography   
 \phantomsection
 \cfoot{}
 \addcontentsline{toc}{section}{Literaturverzeichnis}
-\printbibliography
+\printbibliography  % Da ist der Beweis, dass man keinen Müll labert. Zweitrangig.
 \newpage
 
 % LoF
 \phantomsection
 \addcontentsline{toc}{section}{Abbildungsverzeichnis}
-\listoffigures
+\listoffigures   % Habe nie verstanden warum dass dabei sein muss. Wer schaut sich das bitte an ?!
 \thispagestyle{fancy}
 \newpage
 
